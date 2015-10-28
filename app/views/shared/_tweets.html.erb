@@ -1,0 +1,8 @@
+<section id="tweets">
+  <ul>
+    <% @tweets.each do |tweet| %>
+      <li><%= link_to tweet.text, "http://www.twitter.com/#{tweet.user.screen_name}" %></li>
+  </ul>
+</section>
+
+<% end %>

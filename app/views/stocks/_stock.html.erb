@@ -1,0 +1,9 @@
+
+<p>
+  <%= stock.symbol %>
+  <%= link_to stock.name, stock %>
+  <%= stock.price %>
+  <%= link_to 'Show', stock %>
+  <%= link_to 'Edit', edit_stock_path(stock) %>
+  <%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
