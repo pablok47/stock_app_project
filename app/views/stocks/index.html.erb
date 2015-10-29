@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Watchlist</h1>
-<h3>Enter New Symbol</h3>
 
-<%= render 'form' %>
+
+<div class='col-md-12'>
+  <h1>Watchlist</h1>
+  <h3>Enter New Symbol</h3>
+
+
+    <%= render 'form' %>
 
 <!-- table class="table table-striped">
   <thead>
@@ -14,12 +18,14 @@
       <th colspan="3"></th>
     </tr>
   </thead> -->
+    <div class="stock-container">
+      <% @stocks.each do |stock| %>
+        <%= render stock %>
+      <% end %>
+    </div> 
 
-  <div class="table table-striped">
-    <% @stocks.each do |stock| %>
-      <%= render stock %>
-    <% end %>
-  </div>
+</div>
+  
 <!-- </table> -->
 
 <%= render 'shared/tweets' %>

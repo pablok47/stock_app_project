@@ -1,9 +1,12 @@
+<div class='col-md-12'>
+  <div class='col-md-6'>
 
-<p>
-  <%= stock.symbol %>
-  <%= link_to stock.name, stock %>
-  <%= stock.price %>
-  <%= link_to 'Show', stock %>
-  <%= link_to 'Edit', edit_stock_path(stock) %>
-  <%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
+    <div class='col-md-2'><%= stock.symbol %></div>
+    <div class='col-md-2'><%= link_to stock.name, stock %></div>
+    <div class='col-md-2'>$ <%= stock.price %></div>
+    <div class='col-md-2'><%= link_to 'Show', stock %></div>
+    <div class='col-md-2'><%= link_to 'Edit', edit_stock_path(stock) %></div>
+    <div class='col-md-2'><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+</div>
+

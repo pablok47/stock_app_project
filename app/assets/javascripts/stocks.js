@@ -5,7 +5,7 @@ function ready() {
     // console.dir(xhr.responseText);
     // window.location.reload();
     // console.log(data);
-  $('.table.table-striped').append(data.responseText);
+  $('.stock-container').append(data.responseText);
 
     $('#stock_name').val("");
     // window.location.reload();
