@@ -16,10 +16,15 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :stocks
 
-    GifVault::Application.routes.draw do
 
     get '/signup' => 'users#new'
     post '/users' => 'users#create'
+
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    get '/logout' => 'sessions#destroy'
+
+  
 
   # Example resource route with options:
   #   resources :products do
