@@ -9,26 +9,19 @@
 
     <%= render 'form' %>
 
-<!-- table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Symbol</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead> -->
+
     <div class="stock-container">
       <% @stocks.each do |stock| %>
         <%= render stock %>
       <% end %>
-    </div> 
+    </div>
 
 </div>
-  
-<!-- </table> -->
 
-<%= render 'shared/tweets' %>
+
+
+<%#= render 'shared/tweets' %>
+
 
 
 

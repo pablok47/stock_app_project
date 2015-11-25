@@ -3,19 +3,21 @@ class StocksController < ApplicationController
    before_action :set_stock, only: [:show, :edit, :update, :destroy]
    before_filter :authorize
   def index
-    @stocks = Stock.all 
+    @stocks = Stock.all
     @stock = Stock.new
   end
 
   def show
     if request.xhr?
-      render '_stock', layout: false 
+      render '_stock', layout: false
     end
+
   end
 
   def new
     @stock = Stock.new
-    
+
+
   end
 
   def edit
@@ -34,11 +36,11 @@ class StocksController < ApplicationController
       end
     end
   end
-    
+
 
   def create
     @stock = Stock.new(stock_params)
-  
+
     respond_to do |format|
       if @stock.save
           if request.xhr?
@@ -53,7 +55,7 @@ class StocksController < ApplicationController
       end
     end
 
-    
+
   end
 
   private
